@@ -460,8 +460,8 @@ Library v0.33 [
 ]
 ]]
 local library = {
-	Version = "0.33",
-	WorkspaceName = "Pepsi Lib",
+	Version = "1.4",
+	WorkspaceName = "DogeX",
 	flags = {},
 	signals = {},
 	objects = {},
@@ -470,7 +470,7 @@ local library = {
 	subs = {},
 	colored = {},
 	configuration = {
-		hideKeybind = Enum.KeyCode.RightShift,
+		hideKeybind = Enum.KeyCode.RightControl,
 		smoothDragging = false,
 		easingStyle = Enum.EasingStyle.Quart,
 		easingDirection = Enum.EasingDirection.Out
@@ -6134,9 +6134,6 @@ function library:CreateWindow(options, ...)
 			Name = "Background",
 			Side = "right"
 		})
-		local detailssection = designer:CreateSection({
-			Name = "More Info"
-		})
 		local filessection = designer:CreateSection({
 			Name = "Profiles",
 			Side = "right"
@@ -6292,26 +6289,7 @@ function library:CreateWindow(options, ...)
 				common_table = nil
 			end
 		end
-		if options.Credit ~= false then
-			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Library by Pepsi#5229 "
-			}}
-		elseif "Gee, thanks for your support." then
-		end
-		if options.Info then
-			local typ = type(options.Info)
-			if typ == "string" then
-				daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-					Text = options.Info
-				}}
-			elseif typ == "table" and #options.Info > 0 then
-				for _, v in next, options.Info do
-					daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-						Text = tostring(v)
-					}}
-				end
-			end
-		end
+	
 		for _, v in next, daaata do
 			designerelements[v[2]] = v[3][v[1]](v[3], v[4])
 		end

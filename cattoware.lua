@@ -1,4 +1,5 @@
-  flags = { }, 
+local library = { 
+	flags = { }, 
 	items = { } 
 }
 

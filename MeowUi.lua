@@ -2,6 +2,10 @@ if game.CoreGui:FindFirstChild("Product Hub") then
     game.CoreGui:FindFirstChild("Product Hub"):Destroy()
  end
  
+ if game:GetService("CoreGui"):FindFirstChild("Notifaction") then
+    game:GetService("CoreGui").Notifaction:Destroy();
+ end
+ 
  -- hello Leadi
  local Mainholder = {RainbowColorValue = 0, HueSelectionPosition = 0}
  
@@ -817,7 +821,7 @@ if game.CoreGui:FindFirstChild("Product Hub") then
           end
  
  
-          local ScriptHub = Instance.new("TextButton")
+         --[[local ScriptHub = Instance.new("TextButton")
           local ScriptHubTitle = Instance.new("TextLabel")
           local ScriptHubDesc = Instance.new("TextLabel")
           local ScriptHubCorner = Instance.new("UICorner")
@@ -876,7 +880,7 @@ if game.CoreGui:FindFirstChild("Product Hub") then
           ScriptHubCorner.Parent = ScriptHub
  
  
-          local DiscordBut = Instance.new("TextButton")
+         local DiscordBut = Instance.new("TextButton")
           local DiscordButTitle = Instance.new("TextLabel")
           local DiscordButDesc = Instance.new("TextLabel")
           local DiscordButCorner = Instance.new("UICorner")
@@ -947,7 +951,7 @@ if game.CoreGui:FindFirstChild("Product Hub") then
           DiscordButDesc.TextXAlignment = Enum.TextXAlignment.Left
           
           DiscordButCorner.Name = "DiscordButCorner"
-          DiscordButCorner.Parent = DiscordBut
+          DiscordButCorner.Parent = DiscordBut]]
  
  
  
